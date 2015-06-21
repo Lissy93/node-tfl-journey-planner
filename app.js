@@ -20,6 +20,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+
+app.set('port', (process.env.PORT || 5000));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
@@ -51,5 +55,9 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+});
 
-module.exports = app;
+
+//module.exports = app;
