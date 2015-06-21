@@ -19,5 +19,13 @@
   "devDependencies": {},
   "author": "aliciasykes.com",
   "license": "ISC",
-  "description": "A smart alarm clock that wakes you up earlier if there are delays in your comute journey"
+  "description": "A smart alarm clock that wakes you up earlier if there are delays in your comute journey",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lissy93/node-smart-depart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lissy93/node-smart-depart/issues"
+  },
+  "homepage": "https://github.com/Lissy93/node-smart-depart"
 }

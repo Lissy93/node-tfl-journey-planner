@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var lessMiddleware = require('less-middleware');
+
 
 var routes = require('./routes/index');
 var journeys = require('./routes/journeys');
@@ -12,6 +14,7 @@ var sentimentAnalysis = require('./routes/sentiment-analysis');
 var app = express();
 
 // view engine setup
+app.use(lessMiddleware(__dirname + '/public'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 

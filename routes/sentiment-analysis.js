@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
     tflSentimentAnalysis.fetchTflSentiments(credentials, function(results){
         res.send(results);
     });
-    
+
 });
 
 
