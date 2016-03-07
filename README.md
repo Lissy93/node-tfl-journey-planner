@@ -42,31 +42,33 @@ locations = {
 However, using text values will more than likley have many matches, so your response may not be as you'd planned.
 
 ## Specifying additional options
-The second param is a JSON object where you can put any of the following:
+The second param is a JSON object where you can put any of the following (all are optional):
+
+
 | OPTION                  | DEFAULT     | EXPLINATION                                                                                                                                                               |
 |-------------------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| via                     |             | Optional. Travel through (if in coordinate format then must be "longitude,latitude")                                                                                      |
-| nationalSearch          | [False]     | Optional. Does the journey cover stops outside London? eg. "nationalSearch=true"                                                                                          |
-| date                    |             | Optional. The date must be in yyyyMMdd format                                                                                                                             |
-| time                    |             | Optional. The time must be in HHmm format                                                                                                                                 |
-| timeIs                  | [Departing] | Optional. Does the time given relate to arrival or leaving time? Possible options: "departing" | "arriving"                                                               |
-| journeyPreference       | [LeastTime] | Optional. The journey preference eg possible options: "leastinterchange" | "leasttime" | "leastwalking"                                                                   |
-| mode                    |             | Optional. The mode must be a comma separated list of modes. eg possible options: "public-bus,overground,train,tube,coach,dlr,cablecar,tram,river,walking,cycle"           |
-| accessibilityPreference |             | Optional. The accessibility preference must be a comma separated list eg. "noSolidStairs,noEscalators,noElevators,stepFreeToVehicle,stepFreeToPlatform"                   |
-| fromName                |             | Optional. From name is the location name associated with a from coordinate                                                                                                |
-| toName                  |             | Optional. To name is the label location associated with a to coordinate                                                                                                   |
-| viaName                 |             | Optional. Via name is the location name associated with a via coordinate.                                                                                                 |
-| maxTransferMinutes      |             | Optional. The max walking time in minutes for transfer eg. "120"                                                                                                          |
-| maxWalkingMinutes       |             | Optional. The max walking time in minutes for journeys eg. "120"                                                                                                          |
-| walkingSpeed            | [Average]   | Optional. The walking speed. eg possible options: "slow" | "average" | "fast".                                                                                            |
-| cyclePreference         | [None]      | Optional. The cycle preference. eg possible options: "allTheWay" | "leaveAtStation" | "takeOnTransport" | "cycleHire"                                                     |
-| adjustment              |             | Optional. Time adjustment command. eg possible options: "TripFirst" | "TripLast"                                                                                          |
-| bikeProficiency         |             | Optional. A comma separated list of cycling proficiency levels. eg possible options: "easy,moderate,fast"                                                                 |
-| alternativeCycle        | [False]     | Optional. Option to determine whether to return alternative cycling journey                                                                                               |
-| alternativeWalking      | [True]      | Optional. Option to determine whether to return alternative walking journey                                                                                               |
-| applyHtmlMarkup         | [False]     | Optional. Flag to determine whether certain text (e.g. walking instructions) should be output with HTML tags or not.                                                      |
-| useMultiModalCall       | [False]     | Optional. A boolean to indicate whether or not to return 3 public transport journeys, a bus journey, a cycle hire journey, a personal cycle journey and a walking journey |
-| walkingOptimization     | [False]     | Optional. A boolean to indicate whether to optimize journeys using walking                                                                                                |
+| via                     |             | Travel through (if in coordinate format then must be "longitude,latitude")                                                                                      |
+| nationalSearch          | [False]     | Does the journey cover stops outside London? eg. "nationalSearch=true"                                                                                          |
+| date                    |             | The date must be in yyyyMMdd format                                                                                                                             |
+| time                    |             | The time must be in HHmm format                                                                                                                                 |
+| timeIs                  | [Departing] | Does the time given relate to arrival or leaving time? Possible options: "departing" | "arriving"                                                               |
+| journeyPreference       | [LeastTime] | The journey preference eg possible options: "leastinterchange" | "leasttime" | "leastwalking"                                                                   |
+| mode                    |             | The mode must be a comma separated list of modes. eg possible options: "public-bus,overground,train,tube,coach,dlr,cablecar,tram,river,walking,cycle"           |
+| accessibilityPreference |             | The accessibility preference must be a comma separated list eg. "noSolidStairs,noEscalators,noElevators,stepFreeToVehicle,stepFreeToPlatform"                   |
+| fromName                |             | From name is the location name associated with a from coordinate                                                                                                |
+| toName                  |             | To name is the label location associated with a to coordinate                                                                                                   |
+| viaName                 |             | Via name is the location name associated with a via coordinate.                                                                                                 |
+| maxTransferMinutes      |             | The max walking time in minutes for transfer eg. "120"                                                                                                          |
+| maxWalkingMinutes       |             | The max walking time in minutes for journeys eg. "120"                                                                                                          |
+| walkingSpeed            | [Average]   | The walking speed. eg possible options: "slow" | "average" | "fast".                                                                                            |
+| cyclePreference         | [None]      | The cycle preference. eg possible options: "allTheWay" | "leaveAtStation" | "takeOnTransport" | "cycleHire"                                                     |
+| adjustment              |             | Time adjustment command. eg possible options: "TripFirst" | "TripLast"                                                                                          |
+| bikeProficiency         |             | A comma separated list of cycling proficiency levels. eg possible options: "easy,moderate,fast"                                                                 |
+| alternativeCycle        | [False]     | Option to determine whether to return alternative cycling journey                                                                                               |
+| alternativeWalking      | [True]      | Option to determine whether to return alternative walking journey                                                                                               |
+| applyHtmlMarkup         | [False]     | Flag to determine whether certain text (e.g. walking instructions) should be output with HTML tags or not.                                                      |
+| useMultiModalCall       | [False]     | A boolean to indicate whether or not to return 3 public transport journeys, a bus journey, a cycle hire journey, a personal cycle journey and a walking journey |
+| walkingOptimization     | [False]     | A boolean to indicate whether to optimize journeys using walking                                                                                                |
 
 Specify options like this:
 ```javascript
