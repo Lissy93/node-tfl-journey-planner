@@ -3,7 +3,7 @@
 
 ## Install
 ```
-npm install git://github.com/Lissy93/node-tfl-journey-planner.git --save
+npm install tfl-journey-planner --save
 ```
 
 ## Usage
