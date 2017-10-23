@@ -5,7 +5,7 @@
 [![dependencies Status](https://david-dm.org/lissy93/node-tfl-journey-planner/status.svg)](https://david-dm.org/lissy93/node-tfl-journey-planner)
 [![devDependencies Status](https://david-dm.org/lissy93/node-tfl-journey-planner/dev-status.svg)](https://david-dm.org/lissy93/node-tfl-journey-planner?type=dev)
 [![npm](https://img.shields.io/npm/dy/localeval.svg)](https://www.npmjs.com/package/tfl-journey-planner)
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ddd831ad67604707844a57c4f153c5be)](https://www.codacy.com/app/lissy93/node-tfl-journey-planner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Lissy93/node-tfl-journey-planner&amp;utm_campaign=Badge_Grade)
 
 
 
