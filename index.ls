@@ -5,7 +5,7 @@ querystring = require 'querystring'
 
 module.exports = (lo, options, cb) ->
 
-# Base URL
+  # Base URL
   url =  "https://api.tfl.gov.uk/Journey/JourneyResults"
 
   # Add start location (either string, or object {lat: '', lng: ''}) to URL
@@ -22,4 +22,4 @@ module.exports = (lo, options, cb) ->
   # Make the request
   request {url: url, json: true}, (error, response, body) ->
     if !error and response.statusCode == 200 then cb body # Everythings cool
-    else console.log "ERROR"; cb {} # Stuff isn't so cool, tfl is stupid
+    else throw error; cb {} # Stuff isn't so cool, tfl is stupid
