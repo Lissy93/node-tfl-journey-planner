@@ -1,6 +1,14 @@
 # Node TFL Journey Planner
 > A simple Node wrapper for the for fetching real-time journey's from the TFL API
 
+
+[![dependencies Status](https://david-dm.org/lissy93/node-tfl-journey-planner/status.svg)](https://david-dm.org/lissy93/node-tfl-journey-planner)
+[![devDependencies Status](https://david-dm.org/lissy93/node-tfl-journey-planner/dev-status.svg)](https://david-dm.org/lissy93/node-tfl-journey-planner?type=dev)
+[![npm](https://img.shields.io/npm/dy/localeval.svg)](https://www.npmjs.com/package/tfl-journey-planner)
+
+
+
+
 ## Install
 ```
 npm install tfl-journey-planner --save
@@ -41,6 +49,15 @@ locations = {
 ```
 However, using text values will more than likley have many matches, so your response may not be as you'd planned.
 
+
+or with postal codes/ text addresses
+```javascript
+locations = {
+  to: 'SE18 7PH',
+  from: 'EC3M 3AD'
+};
+```
+
 ## Specifying additional options
 The second param is a JSON object where you can put any of the following (all are optional):
 
@@ -70,6 +87,8 @@ The second param is a JSON object where you can put any of the following (all ar
 | useMultiModalCall       | [False]     | A boolean to indicate whether or not to return 3 public transport journeys, a bus journey, a cycle hire journey, a personal cycle journey and a walking journey |
 | walkingOptimization     | [False]     | A boolean to indicate whether to optimize journeys using walking                                                                                                |
 
+
+
 Specify options like this:
 ```javascript
 options = {
@@ -79,41 +98,36 @@ options = {
 }
 ```
 
+
+
 ## Developing
-Written in CoffeeScript, run `gulp build` to build, or `gulp watch` to watch for changes then build
+Written in [LiveScript](http://livescript.net/), run `npm run build` to build, or `npm run watch` to watch for changes then build
+
+
 
 ## Unit Tests
 `npm test`
-// todo
+
+
 
 ## Issues
-Report on GitHub repo page
+Report on [GitHub repo issue page](https://github.com/Lissy93/node-tfl-journey-planner/issues)
 
 
 
 
 
-### Authenticating
+## Authenticating
 Authentication is not required any longer or tfl requests.
 If you do need to authenticate then you can sign up for an API key at https://api-portal.tfl.gov.uk/signup
 Create a JSON object similar to the one below
 
-    var config = {};
-
+```javascript
     tfl = {
         appId: 'xxxxxxxx',
         appKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     };
-
-    module.exports = config;
-
-
-If you have put your credentials in a seperate file like above you can include them in your main JavaScript file the normal way
 ```
-var credentials = require('../helpers/config');
-```
-
-Also don't forget to add the file with your API keys to .gitignore
 
 [TFL]:https://api-portal.tfl.gov.uk/signup
 [@lissy_sykes]:http://twitter.com/lissy_sykes
