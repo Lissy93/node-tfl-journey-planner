@@ -1,4 +1,6 @@
-# Node TFL Journey Planner
+
+![node-tfl-journey-planner](https://i.imgur.com/dxqiC8j.png)
+
 > A simple Node wrapper for the for fetching real-time journey's from the TFL API
 
 
