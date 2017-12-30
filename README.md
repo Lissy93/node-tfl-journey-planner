@@ -12,6 +12,8 @@
 
 
 ## Install
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Lissy93/node-tfl-journey-planner.svg)](https://greenkeeper.io/)
 ```
 npm install tfl-journey-planner --save
 ```
